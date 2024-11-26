@@ -51,9 +51,26 @@
         <img src="food/sushi.jpeg" alt="sushi" />
         <label><input type="checkbox" name="food" value="sushi" /> sushi</label>
       </div>
+      <div class="food-item">
+        <img src="food/tajine.jpg" alt="tagine" />
+        <label><input type="checkbox" name="food" value="tajine" /> Tajine</label>
+      </div>
     </div>
-    <button class="button" onclick="location.href='dessert.html'">
-      Continue...
-    </button>
+<button class="button" onclick="handleButtonClick()">
+  Continue...
+</button>
+
+<script>
+  function handleButtonClick() {
+    // Change the button text
+    const button = document.querySelector('.button');
+    button.textContent = "Don't worry, L7ar is included!";
+    
+    // Delay navigation to ensure the user sees the message
+    setTimeout(() => {
+      location.href = 'dessert.html';
+    }, 1300); // Adjust the delay as needed (2000 ms = 2 seconds)
+  }
+</script>
   </body>
 </html>
